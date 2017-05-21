@@ -4,10 +4,12 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,9 +65,16 @@ public class MapsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_maps, container, false);
+        View result=inflater.inflate(R.layout.fragment_maps, container, false);
+        ViewPager pager=(ViewPager)result.findViewById(R.id.pager);
+        pager.setAdapter(buildAdapter());
+        return result;
     }
+
+    private PagerAdapter buildAdapter() {
+        return(new CustomPagerAdapter(getActivity(), getChildFragmentManager()));
+    }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

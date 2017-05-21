@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link LoadoutRandomizerFragment.OnFragmentInteractionListener} interface
+ * {@link PrisonMapFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link LoadoutRandomizerFragment#newInstance} factory method to
+ * Use the {@link PrisonMapFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LoadoutRandomizerFragment extends Fragment {
+public class PrisonMapFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -28,24 +28,9 @@ public class LoadoutRandomizerFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-    Perk firstPerk;
-    Perk secondPerk;
-    Perk thirdPerk;
 
-
-    public LoadoutRandomizerFragment() {
+    public PrisonMapFragment() {
         // Required empty public constructor
-        /*
-        firstPerk = Perk.getRandom();
-        secondPerk = Perk.getRandom();
-        while(secondPerk.equals(firstPerk)){
-            secondPerk = Perk.getRandom();
-        }
-        thirdPerk = Perk.getRandom();
-        while(thirdPerk.equals(firstPerk) || thirdPerk.equals(secondPerk)){
-            thirdPerk = Perk.getRandom();
-        }
-        */
     }
 
     /**
@@ -54,11 +39,11 @@ public class LoadoutRandomizerFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LoadoutRandomizerFragment.
+     * @return A new instance of fragment PrisonMapFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LoadoutRandomizerFragment newInstance(String param1, String param2) {
-        LoadoutRandomizerFragment fragment = new LoadoutRandomizerFragment();
+    public static PrisonMapFragment newInstance(String param1, String param2) {
+        PrisonMapFragment fragment = new PrisonMapFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -79,7 +64,7 @@ public class LoadoutRandomizerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_loadout_randomizer, container, false);
+        return inflater.inflate(R.layout.fragment_prison_map, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

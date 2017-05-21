@@ -30,8 +30,8 @@
                     android:layout_gravity="center"
                     android:src="@drawable/cullingwhite"
                     android:paddingBottom="8dp"
-                    android:paddingEnd="60dp"
-                    android:paddingRight="60dp" />
+                    android:paddingEnd="68dp"
+                    android:paddingRight="68dp" />
 
             </RelativeLayout>
 

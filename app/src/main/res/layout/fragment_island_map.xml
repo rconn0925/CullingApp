@@ -2,12 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.rossconnacher.cullingapp.PatchNotesFragment">
+    tools:context="com.rossconnacher.cullingapp.IslandMapFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <WebView
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/patchNotesWebView" />
+        android:id="@+id/islandMap"/>
 
 </FrameLayout>

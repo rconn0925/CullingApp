@@ -1,5 +1,6 @@
 package com.rossconnacher.cullingapp;
 
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,6 +8,12 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerFragment;
+import com.google.android.youtube.player.YouTubePlayerSupportFragment;
+import com.google.android.youtube.player.YouTubePlayerView;
 
 
 /**
@@ -28,6 +35,11 @@ public class GuidesFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private YouTubePlayer YPlayer;
+    private static String VIDEO_ID ="2wmBp-P9U08";
+    private static final String API_KEY = "AIzaSyCI51c1IipJY0ma9OjD6RGNZ71S_pJietw";
+    private boolean isFullScreen;
+
 
     public GuidesFragment() {
         // Required empty public constructor
@@ -64,8 +76,47 @@ public class GuidesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_guides, container, false);
+        View view = inflater.inflate(R.layout.fragment_guides, container, false);
+
+        YouTubePlayerFragment youTubePlayerFragment = YouTubePlayerFragment.newInstance();
+
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.add(R.id.youtubeFragment, youTubePlayerFragment).commit();
+
+
+        youTubePlayerFragment.initialize(API_KEY, new YouTubePlayer.OnInitializedListener() {
+
+
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
+                if (!wasRestored) {
+                    YPlayer=player;
+                    player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+                    player.loadVideo(VIDEO_ID);
+                    player.setOnFullscreenListener(new YouTubePlayer.OnFullscreenListener() {
+                        @Override
+                        public void onFullscreen(boolean _isFullScreen) {
+                            isFullScreen = _isFullScreen;
+                        }
+
+                    });
+                    player.play();
+                }
+            }
+
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult error) {
+                // YouTube error
+                String errorMessage = error.toString();
+               // Toast.makeText(getActivity(), errorMessage, Toast.LENGTH_LONG).show();
+               // Log.d("errorMessage:", errorMessage);
+            }
+        });
+
+        return view;
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -89,7 +140,9 @@ public class GuidesFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+        YPlayer.pause();
     }
+
 
     /**
      * This interface must be implemented by activities that contain this

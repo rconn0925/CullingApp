@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity
         GuidesFragment.OnFragmentInteractionListener,
         LoadoutRandomizerFragment.OnFragmentInteractionListener,
         MapsFragment.OnFragmentInteractionListener,
+        IslandMapFragment.OnFragmentInteractionListener,
+        PrisonMapFragment.OnFragmentInteractionListener,
         PatchNotesFragment.OnFragmentInteractionListener{
 
 
@@ -46,6 +48,12 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Insert the fragment by replacing any existing fragment
+        FragmentManager fragmentManager = getFragmentManager();
+        currentFragment = new AirdropsPerksFragment();
+        fragmentManager.beginTransaction().replace(R.id.contentFrame, currentFragment).commit();
+
     }
 
     @Override
