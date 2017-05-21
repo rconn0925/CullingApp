@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/icon_group">
+        <item
+            android:id="@+id/nav_airdropsperks"
+            android:icon="@drawable/ic_color_lens_black_24dp"
+            android:title="Airdrops/Perks" />
+        <item
+            android:id="@+id/nav_craftingrecipes"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Crafting Recipes" />
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Maps" />
+        <item
+            android:id="@+id/nav_guides"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Guides" />
+        <item
+            android:id="@+id/nav_patchnotes"
+            android:icon="@drawable/ic_import_contacts_black_24dp"
+            android:title="Patch Notes" />
+        <item
+            android:id="@+id/nav_cullculator"
+            android:icon="@drawable/ic_insert_chart_black_24dp"
+            android:title="Cullculator" />
+        <item
+            android:id="@+id/nav_loadoutrandomizer"
+            android:icon="@drawable/ic_casino_black_24dp"
+            android:title="Loadout Randomizer" />
+    </group>
+
+
+</menu>
