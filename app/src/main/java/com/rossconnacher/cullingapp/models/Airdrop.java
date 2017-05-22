@@ -1,4 +1,4 @@
-package com.rossconnacher.cullingapp;
+package com.rossconnacher.cullingapp.models;
 
 /**
  * Created by Ross on 5/20/2017.
