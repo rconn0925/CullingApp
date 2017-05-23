@@ -1,4 +1,4 @@
-package com.rossconnacher.cullingapp;
+package com.rossconnacher.cullingguideandtools;
 
 import org.junit.Test;
 

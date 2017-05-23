@@ -1,4 +1,4 @@
-package com.rossconnacher.cullingapp;
+package com.rossconnacher.cullingguideandtools;
 
 import android.app.FragmentManager;
 import android.net.Uri;
@@ -13,8 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.rossconnacher.cullingapp.models.Airdrop;
-import com.rossconnacher.cullingapp.models.Perk;
+import com.rossconnacher.cullingguideandtools.models.Airdrop;
+import com.rossconnacher.cullingguideandtools.models.Perk;
 
 import java.util.ArrayList;
 

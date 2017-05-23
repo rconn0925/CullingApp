@@ -1,4 +1,4 @@
-package com.rossconnacher.cullingapp;
+package com.rossconnacher.cullingguideandtools;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,16 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.davemorrissey.labs.subscaleview.ImageSource;
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link CraftingRecipesFragment.OnFragmentInteractionListener} interface
+ * {@link IslandMapFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link CraftingRecipesFragment#newInstance} factory method to
+ * Use the {@link IslandMapFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CraftingRecipesFragment extends Fragment {
+public class IslandMapFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +32,7 @@ public class CraftingRecipesFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public CraftingRecipesFragment() {
+    public IslandMapFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +42,11 @@ public class CraftingRecipesFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CraftingRecipesFragment.
+     * @return A new instance of fragment IslandMapFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CraftingRecipesFragment newInstance(String param1, String param2) {
-        CraftingRecipesFragment fragment = new CraftingRecipesFragment();
+    public static IslandMapFragment newInstance(String param1, String param2) {
+        IslandMapFragment fragment = new IslandMapFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +67,10 @@ public class CraftingRecipesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_crafting_recipes, container, false);
+        View view = inflater.inflate(R.layout.fragment_island_map, container, false);
+        SubsamplingScaleImageView imageView = (SubsamplingScaleImageView)view.findViewById(R.id.islandMap);
+        imageView.setImage(ImageSource.resource(R.drawable.islandmap));
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

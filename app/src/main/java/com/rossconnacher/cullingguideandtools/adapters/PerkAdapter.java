@@ -1,4 +1,4 @@
-package com.rossconnacher.cullingapp.adapters;
+package com.rossconnacher.cullingguideandtools.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.rossconnacher.cullingapp.R;
-import com.rossconnacher.cullingapp.models.Perk;
-import com.rossconnacher.cullingapp.viewholders.PerkViewHolder;
+import com.rossconnacher.cullingguideandtools.R;
+import com.rossconnacher.cullingguideandtools.models.Perk;
+import com.rossconnacher.cullingguideandtools.viewholders.PerkViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;

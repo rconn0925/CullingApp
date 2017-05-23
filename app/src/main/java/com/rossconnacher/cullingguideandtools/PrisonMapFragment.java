@@ -1,30 +1,23 @@
-package com.rossconnacher.cullingapp;
+package com.rossconnacher.cullingguideandtools;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.rossconnacher.cullingapp.models.Airdrop;
-import com.rossconnacher.cullingapp.models.Perk;
-
-import java.util.ArrayList;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link AirdropsPerksFragment.OnFragmentInteractionListener} interface
+ * {@link PrisonMapFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link AirdropsPerksFragment#newInstance} factory method to
+ * Use the {@link PrisonMapFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AirdropsPerksFragment extends Fragment {
+public class PrisonMapFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,12 +26,10 @@ public class AirdropsPerksFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    ArrayList<Perk> allPerks;
-    ArrayList<Airdrop> allAirdrops;
 
     private OnFragmentInteractionListener mListener;
 
-    public AirdropsPerksFragment() {
+    public PrisonMapFragment() {
         // Required empty public constructor
     }
 
@@ -48,11 +39,11 @@ public class AirdropsPerksFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment AirdropsPerksFragment.
+     * @return A new instance of fragment PrisonMapFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AirdropsPerksFragment newInstance(String param1, String param2) {
-        AirdropsPerksFragment fragment = new AirdropsPerksFragment();
+    public static PrisonMapFragment newInstance(String param1, String param2) {
+        PrisonMapFragment fragment = new PrisonMapFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -73,14 +64,7 @@ public class AirdropsPerksFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_airdrops_perks, container, false);
-        ViewPager pager=(ViewPager)view.findViewById(R.id.airdropsPerksPager);
-        pager.setAdapter(buildAdapter());
-        return view;
-    }
-
-    private PagerAdapter buildAdapter() {
-        return(new PerksAirdropPagerAdapter(getActivity(), getChildFragmentManager()));
+        return inflater.inflate(R.layout.fragment_prison_map, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -106,7 +90,6 @@ public class AirdropsPerksFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
 
     /**
      * This interface must be implemented by activities that contain this

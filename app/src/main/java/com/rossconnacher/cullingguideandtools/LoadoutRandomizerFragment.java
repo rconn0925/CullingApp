@@ -1,4 +1,4 @@
-package com.rossconnacher.cullingapp;
+package com.rossconnacher.cullingguideandtools;
 
 import android.content.Context;
 import android.net.Uri;
@@ -10,15 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
-import com.rossconnacher.cullingapp.adapters.AirdropAdapter;
-import com.rossconnacher.cullingapp.adapters.PerkAdapter;
-import com.rossconnacher.cullingapp.models.Airdrop;
-import com.rossconnacher.cullingapp.models.Perk;
+import com.rossconnacher.cullingguideandtools.adapters.AirdropAdapter;
+import com.rossconnacher.cullingguideandtools.adapters.PerkAdapter;
+import com.rossconnacher.cullingguideandtools.models.Airdrop;
+import com.rossconnacher.cullingguideandtools.models.Perk;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Random;
 
 import butterknife.ButterKnife;

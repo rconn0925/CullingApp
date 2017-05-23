@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/youtubeFragment"
     android:layout_centerHorizontal="true"
-    tools:context="com.rossconnacher.cullingapp.GuidesFragment">
+    tools:context="com.rossconnacher.cullingguideandtools.GuidesFragment">
 
 
 </FrameLayout>

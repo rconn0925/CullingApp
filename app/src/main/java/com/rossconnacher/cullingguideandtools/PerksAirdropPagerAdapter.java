@@ -1,17 +1,16 @@
-package com.rossconnacher.cullingapp;
+package com.rossconnacher.cullingguideandtools;
 
 import android.app.Activity;
-import android.app.FragmentManager;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.support.v13.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 
 /**
- * Created by Ross on 5/21/2017.
+ * Created by Ross on 5/22/2017.
  */
 
-class MapsPagerAdapter extends FragmentPagerAdapter {
-    public MapsPagerAdapter(Activity activity, FragmentManager childFragmentManager) {
+class PerksAirdropPagerAdapter extends FragmentPagerAdapter {
+    public PerksAirdropPagerAdapter(Activity activity, FragmentManager childFragmentManager) {
         super(childFragmentManager);
     }
 
@@ -19,9 +18,9 @@ class MapsPagerAdapter extends FragmentPagerAdapter {
     public android.app.Fragment getItem(int position) {
         Fragment frag;
         if(position==0){
-            frag = new IslandMapFragment();
+            frag = new PerksFragment();
         }else {
-            frag = new PrisonMapFragment();
+            frag = new AirdropsFragment();
         }
         return frag;
     }
@@ -35,9 +34,10 @@ class MapsPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
 
         if (position == 0) {
-            return "Island";
+            return "Perks";
         }  else {
-            return "Prison";
+            return "Airdrops";
         }
     }
 }
+

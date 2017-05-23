@@ -1,24 +1,30 @@
-package com.rossconnacher.cullingapp;
+package com.rossconnacher.cullingguideandtools;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
+
+import com.rossconnacher.cullingguideandtools.models.Airdrop;
+import com.rossconnacher.cullingguideandtools.models.Perk;
+
+import java.util.ArrayList;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link PatchNotesFragment.OnFragmentInteractionListener} interface
+ * {@link AirdropsPerksFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link PatchNotesFragment#newInstance} factory method to
+ * Use the {@link AirdropsPerksFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PatchNotesFragment extends Fragment {
+public class AirdropsPerksFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -27,10 +33,12 @@ public class PatchNotesFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    ArrayList<Perk> allPerks;
+    ArrayList<Airdrop> allAirdrops;
 
     private OnFragmentInteractionListener mListener;
 
-    public PatchNotesFragment() {
+    public AirdropsPerksFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +48,11 @@ public class PatchNotesFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PatchNotesFragment.
+     * @return A new instance of fragment AirdropsPerksFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PatchNotesFragment newInstance(String param1, String param2) {
-        PatchNotesFragment fragment = new PatchNotesFragment();
+    public static AirdropsPerksFragment newInstance(String param1, String param2) {
+        AirdropsPerksFragment fragment = new AirdropsPerksFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,10 +73,14 @@ public class PatchNotesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_patch_notes, container, false);
-        WebView myWebView = (WebView) view.findViewById(R.id.patchNotesWebView);
-        myWebView.loadUrl("http://theculling.com/patches/");
+        View view = inflater.inflate(R.layout.fragment_airdrops_perks, container, false);
+        ViewPager pager=(ViewPager)view.findViewById(R.id.airdropsPerksPager);
+        pager.setAdapter(buildAdapter());
         return view;
+    }
+
+    private PagerAdapter buildAdapter() {
+        return(new PerksAirdropPagerAdapter(getActivity(), getChildFragmentManager()));
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -94,6 +106,7 @@ public class PatchNotesFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
 
     /**
      * This interface must be implemented by activities that contain this

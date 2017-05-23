@@ -1,11 +1,11 @@
-package com.rossconnacher.cullingapp.viewholders;
+package com.rossconnacher.cullingguideandtools.viewholders;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.rossconnacher.cullingapp.R;
+import com.rossconnacher.cullingguideandtools.R;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

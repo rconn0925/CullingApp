@@ -1,30 +1,24 @@
-package com.rossconnacher.cullingapp;
+package com.rossconnacher.cullingguideandtools;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-
-import com.davemorrissey.labs.subscaleview.ImageSource;
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
+import android.webkit.WebView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link IslandMapFragment.OnFragmentInteractionListener} interface
+ * {@link PatchNotesFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link IslandMapFragment#newInstance} factory method to
+ * Use the {@link PatchNotesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class IslandMapFragment extends Fragment {
+public class PatchNotesFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -36,7 +30,7 @@ public class IslandMapFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public IslandMapFragment() {
+    public PatchNotesFragment() {
         // Required empty public constructor
     }
 
@@ -46,11 +40,11 @@ public class IslandMapFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment IslandMapFragment.
+     * @return A new instance of fragment PatchNotesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static IslandMapFragment newInstance(String param1, String param2) {
-        IslandMapFragment fragment = new IslandMapFragment();
+    public static PatchNotesFragment newInstance(String param1, String param2) {
+        PatchNotesFragment fragment = new PatchNotesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -71,9 +65,9 @@ public class IslandMapFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_island_map, container, false);
-        SubsamplingScaleImageView imageView = (SubsamplingScaleImageView)view.findViewById(R.id.islandMap);
-        imageView.setImage(ImageSource.resource(R.drawable.islandmap));
+        View view = inflater.inflate(R.layout.fragment_patch_notes, container, false);
+        WebView myWebView = (WebView) view.findViewById(R.id.patchNotesWebView);
+        myWebView.loadUrl("http://theculling.com/patches/");
         return view;
     }
 

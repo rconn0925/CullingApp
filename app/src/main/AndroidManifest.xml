@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rossconnacher.cullingapp">
-
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="com.rossconnacher.cullingguideandtools">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -11,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.rossconnacher.cullingguideandtools.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation|keyboard|keyboardHidden|screenSize">
             <intent-filter>

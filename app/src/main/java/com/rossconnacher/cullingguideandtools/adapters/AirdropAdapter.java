@@ -1,4 +1,4 @@
-package com.rossconnacher.cullingapp.adapters;
+package com.rossconnacher.cullingguideandtools.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -7,9 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.rossconnacher.cullingapp.R;
-import com.rossconnacher.cullingapp.models.Airdrop;
-import com.rossconnacher.cullingapp.viewholders.AirdropViewHolder;
+import com.rossconnacher.cullingguideandtools.R;
+import com.rossconnacher.cullingguideandtools.models.Airdrop;
+import com.rossconnacher.cullingguideandtools.viewholders.AirdropViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
