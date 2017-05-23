@@ -66,13 +66,13 @@ public class MapsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View result=inflater.inflate(R.layout.fragment_maps, container, false);
-        ViewPager pager=(ViewPager)result.findViewById(R.id.pager);
+        ViewPager pager=(ViewPager)result.findViewById(R.id.mapPager);
         pager.setAdapter(buildAdapter());
         return result;
     }
 
     private PagerAdapter buildAdapter() {
-        return(new CustomPagerAdapter(getActivity(), getChildFragmentManager()));
+        return(new MapsPagerAdapter(getActivity(), getChildFragmentManager()));
     }
 
 

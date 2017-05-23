@@ -17,6 +17,8 @@ import butterknife.InjectView;
 public class AirdropViewHolder extends RecyclerView.ViewHolder {
     private static final String TAG = "AirdropViewHolder";
 
+    @InjectView(R.id.airdropCost)
+    public TextView airdropCost;
     @InjectView(R.id.airdropName)
     public TextView airdropName;
     @InjectView(R.id.airdropCatagory)

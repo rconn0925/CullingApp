@@ -10,8 +10,8 @@ import android.support.v4.view.PagerAdapter;
  * Created by Ross on 5/21/2017.
  */
 
-class CustomPagerAdapter extends FragmentPagerAdapter {
-    public CustomPagerAdapter(Activity activity, FragmentManager childFragmentManager) {
+class MapsPagerAdapter extends FragmentPagerAdapter {
+    public MapsPagerAdapter(Activity activity, FragmentManager childFragmentManager) {
         super(childFragmentManager);
     }
 

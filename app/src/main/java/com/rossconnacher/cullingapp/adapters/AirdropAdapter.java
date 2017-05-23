@@ -42,18 +42,52 @@ public class AirdropAdapter  extends RecyclerView.Adapter<AirdropViewHolder>{
         final Airdrop airdrop = mAirdrops.get(position);
         holder.airdropName.setText(airdrop.getAirdropName());
         holder.airdropCatagory.setText(airdrop.getAirdropCatagory());
+        holder.airdropCost.setText(airdrop.getAirdropCost()+" FUNC");
 
         for(int i = 0; i < airdrop.getAirdropContents().length; i++)
         {
             if(i==0){
-                holder.airdropContents1Name.setText(airdrop.getAirdropContents()[0]);
+                if(airdrop.getAirdropContents().length==1)
+                {
+                    holder.airdropContents1Name.setText(airdrop.getAirdropContents()[0]);
+                    holder.airdropContents2Name.setText("");
+                    holder.airdropContents3Name.setText("");
+                    holder.airdropContents4Name.setText("");
+                    holder.airdropContents5Name.setText("");
+                    break;
+                } else {
+                    holder.airdropContents1Name.setText(airdrop.getAirdropContents()[0]);
+                }
                // holder.airdropContents1.setImageDrawable(R.drawable.);
             } else if (i == 1){
-                holder.airdropContents2Name.setText(airdrop.getAirdropContents()[1]);
+                if(airdrop.getAirdropContents().length==2){
+                    holder.airdropContents2Name.setText(airdrop.getAirdropContents()[1]);
+                    holder.airdropContents3Name.setText("");
+                    holder.airdropContents4Name.setText("");
+                    holder.airdropContents5Name.setText("");
+                    break;
+                } else {
+                    holder.airdropContents2Name.setText(airdrop.getAirdropContents()[1]);
+                }
             } else if (i == 2){
-                holder.airdropContents3Name.setText(airdrop.getAirdropContents()[2]);
+                if(airdrop.getAirdropContents().length==3)
+                {
+                    holder.airdropContents3Name.setText(airdrop.getAirdropContents()[2]);
+                    holder.airdropContents4Name.setText("");
+                    holder.airdropContents5Name.setText("");
+                    break;
+                } else {
+                    holder.airdropContents3Name.setText(airdrop.getAirdropContents()[2]);
+                }
             } else if (i == 3){
-                holder.airdropContents4Name.setText(airdrop.getAirdropContents()[3]);
+                if(airdrop.getAirdropContents().length==3)
+                {
+                    holder.airdropContents4Name.setText(airdrop.getAirdropContents()[3]);
+                    holder.airdropContents5Name.setText("");
+                    break;
+                } else {
+                    holder.airdropContents4Name.setText(airdrop.getAirdropContents()[3]);
+                }
             } else {
                 holder.airdropContents5Name.setText(airdrop.getAirdropContents()[4]);
             }

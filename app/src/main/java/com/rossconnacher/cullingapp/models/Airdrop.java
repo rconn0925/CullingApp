@@ -28,6 +28,7 @@ public class Airdrop {
     public String[] getAirdropContents() {
         return AirdropContents;
     }
+
     public int getAirdropCost() {
         return AirdropCost;
     }
