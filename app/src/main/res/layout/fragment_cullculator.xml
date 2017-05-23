@@ -142,11 +142,6 @@
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/backstab"
-                    android:text="Backstab"/>
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/muscleManMilk"
                     android:text="Muscleman Milk"/>
                 <RadioButton
@@ -181,27 +176,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@android:color/darker_gray"/>
-
-                <RadioButton
-                    android:layout_width="match_parent"
+                <RadioGroup
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tierOneExpose"
-                    android:text="*"/>
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tierTwoExpose"
-                    android:text="***"/>
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tierThreeExpose"
-                    android:text="***"/>
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/trapper"
-                    android:text="Trapper"/>
+                    android:id="@+id/exposeRadioGroup">
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tierOneExpose"
+                        android:clickable="true"
+                        android:text="*"/>
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tierTwoExpose"
+                        android:clickable="true"
+                        android:text="**"/>
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:id="@+id/tierThreeExpose"
+                        android:text="***/Trapper"/>
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:id="@+id/none"
+                        android:text="None"/>
+                </RadioGroup>
 
             </LinearLayout>
         </LinearLayout>
@@ -245,7 +248,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Weapon Damage = "/>
+                    android:text="Throw Damage = "/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
