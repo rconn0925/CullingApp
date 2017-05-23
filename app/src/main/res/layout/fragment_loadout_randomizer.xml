@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.rossconnacher.cullingapp.LoadoutRandomizerFragment"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:padding="8dp">
 
 
     <TextView
@@ -16,17 +17,25 @@
         android:layout_centerInParent="true"
         android:layout_alignParentTop="true" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/perkTitle"
+        android:id="@+id/deviderTop"
+        android:layout_centerInParent="true"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/randomPerks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_below="@id/perkTitle"/>
+        android:layout_below="@id/deviderTop"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/dark_gray"
+        android:background="@color/colorPrimary"
         android:layout_below="@id/randomPerks"
         android:id="@+id/devider"
         android:layout_centerInParent="true"/>
@@ -47,6 +56,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_below="@id/airdropTitle"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/airdropTitle"
+        android:id="@+id/devider1"
+        android:layout_centerInParent="true"/>
 
     <Button
         android:layout_width="wrap_content"

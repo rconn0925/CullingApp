@@ -213,7 +213,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/customborder"
+            android:background="@drawable/customborderblack"
             android:layout_marginTop="8dp">
 
             <LinearLayout
@@ -224,20 +224,24 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Weapon Damage = "/>
+                    android:text="Weapon Damage = "
+                    android:textColor="@color/white" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/minWeaponDamage"/>
+                    android:id="@+id/minWeaponDamage"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" - "/>
+                    android:text=" - "
+                    android:textColor="@color/white"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/maxWeaponDamage"/>
+                    android:id="@+id/maxWeaponDamage"
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
             <LinearLayout
@@ -248,20 +252,24 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Throw Damage = "/>
+                    android:text="Throw Damage = "
+                    android:textColor="@color/white"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/minThrowDamage"/>
+                    android:id="@+id/minThrowDamage"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" - "/>
+                    android:text=" - "
+                    android:textColor="@color/white"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/maxThrowDamage"/>
+                    android:id="@+id/maxThrowDamage"
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
         </LinearLayout>

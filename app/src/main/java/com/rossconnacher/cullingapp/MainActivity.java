@@ -104,9 +104,12 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_airdropsperks) {
             currentFragment = new AirdropsPerksFragment();
-        } else if (id == R.id.nav_craftingrecipes) {
+        }
+
+        /*else if (id == R.id.nav_craftingrecipes) {
             currentFragment = new CraftingRecipesFragment();
-        } else if (id == R.id.nav_maps) {
+        }*/
+          else if (id == R.id.nav_maps) {
             currentFragment = new MapsFragment();
         } else if (id == R.id.nav_guides) {
             currentFragment = new GuidesFragment();

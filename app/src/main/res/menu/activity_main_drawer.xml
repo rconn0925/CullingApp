@@ -7,10 +7,12 @@
             android:id="@+id/nav_airdropsperks"
             android:icon="@drawable/ic_color_lens_black_24dp"
             android:title="Airdrops/Perks" />
+        <!--
         <item
             android:id="@+id/nav_craftingrecipes"
             android:icon="@drawable/ic_menu_manage"
             android:title="Crafting Recipes" />
+         -->
         <item
             android:id="@+id/nav_maps"
             android:icon="@drawable/ic_menu_gallery"

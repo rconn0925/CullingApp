@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.rossconnacher.cullingapp.IslandMapFragment">
+    tools:context="com.rossconnacher.cullingapp.IslandMapFragment"
+    android:background="@color/colorPrimary">
 
     <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
         android:layout_width="match_parent"

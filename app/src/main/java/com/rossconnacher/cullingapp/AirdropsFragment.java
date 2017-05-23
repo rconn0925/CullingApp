@@ -106,7 +106,7 @@ public class AirdropsFragment extends Fragment {
         Airdrop airdrop11 = new Airdrop("Random Tier 3 Axe", new String[]{"Random T3 Axe"},100,"Mid");
         Airdrop airdrop12 = new Airdrop("Random Tier 3 Blade", new String[]{"Random T3 Blade"},100,"Mid");
         Airdrop airdrop13 = new Airdrop("Random Tier 3 Bludgeon", new String[]{"Random T3 Bludgeon"},100,"Mid");
-        Airdrop airdrop14 = new Airdrop("Random Tier 3 Spear", new String[]{"Random T3 Axe Spear"},100,"Mid");
+        Airdrop airdrop14 = new Airdrop("Random Tier 3 Spear", new String[]{"Random T3 Spear"},100,"Mid");
         Airdrop airdrop15 = new Airdrop("Long Ball", new String[]{"Baseball Bat", "Reinforced Crafted Armor","Gas Grenade","Crafted Explosive"},150,"Late");
         Airdrop airdrop16 = new Airdrop("Outback", new String[]{"Bowie Knife", "Steel Punji Sticks","Steel Snares","Steel Caltrops"},150,"Late");
         Airdrop airdrop17 = new Airdrop("Black Thumb", new String[]{"Pipe Wrench", "Pepper Spray","Iron-4-Skin","Steel Punji Sticks"},150,"Late");

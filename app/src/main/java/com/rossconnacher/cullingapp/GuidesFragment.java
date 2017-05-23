@@ -79,20 +79,17 @@ public class GuidesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_guides, container, false);
 
         YouTubePlayerFragment youTubePlayerFragment = YouTubePlayerFragment.newInstance();
-
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.add(R.id.youtubeFragment, youTubePlayerFragment).commit();
-
-
+      //  youTubePlayerFragment = (YouTubePlayerFragment) getFragmentManager().findFragmentById(R.id.youtubeFragment);
         youTubePlayerFragment.initialize(API_KEY, new YouTubePlayer.OnInitializedListener() {
 
 
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
                 if (!wasRestored) {
-                    YPlayer=player;
+                    YPlayer = player;
                     player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
                     player.loadVideo(VIDEO_ID);
+                    /*
                     player.setOnFullscreenListener(new YouTubePlayer.OnFullscreenListener() {
                         @Override
                         public void onFullscreen(boolean _isFullScreen) {
@@ -100,10 +97,10 @@ public class GuidesFragment extends Fragment {
                         }
 
                     });
+                    */
                     player.play();
                 }
             }
-
 
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult error) {
@@ -113,7 +110,8 @@ public class GuidesFragment extends Fragment {
                // Log.d("errorMessage:", errorMessage);
             }
         });
-
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.add(R.id.youtubeFragment, youTubePlayerFragment).commit();
         return view;
     }
 
@@ -140,7 +138,11 @@ public class GuidesFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
-        YPlayer.pause();
+        /*
+        if(YPlayer.isPlaying()){
+            YPlayer.pause();
+        }
+        */
     }
 
 

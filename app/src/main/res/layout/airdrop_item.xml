@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/airdropBackground">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -49,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/airdropContents1Name"
-            android:textSize="12sp"/>
+            android:textSize="11sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -67,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/airdropContents2Name"
-                android:textSize="12sp"/>
+                android:textSize="11sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -85,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/airdropContents3Name"
-                android:textSize="12sp"/>
+                android:textSize="11sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -103,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/airdropContents4Name"
-                android:textSize="12sp"/>
+                android:textSize="11sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -121,7 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/airdropContents5Name"
-                android:textSize="12sp"/>
+                android:textSize="11sp"/>
         </LinearLayout>
 
     </LinearLayout>

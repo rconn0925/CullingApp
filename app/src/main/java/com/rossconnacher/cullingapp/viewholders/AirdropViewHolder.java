@@ -3,6 +3,7 @@ package com.rossconnacher.cullingapp.viewholders;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.rossconnacher.cullingapp.R;
@@ -43,6 +44,8 @@ public class AirdropViewHolder extends RecyclerView.ViewHolder {
     public ImageView airdropContents5;
     @InjectView(R.id.airdropContents5Name)
     public TextView airdropContents5Name;
+    @InjectView(R.id.airdropBackground)
+    public LinearLayout airdropBackground;
 
     public AirdropViewHolder(View itemView) {
         super(itemView);

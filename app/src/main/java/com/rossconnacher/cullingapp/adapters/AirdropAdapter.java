@@ -1,6 +1,7 @@
 package com.rossconnacher.cullingapp.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ public class AirdropAdapter  extends RecyclerView.Adapter<AirdropViewHolder>{
 
     private Context mContext;
     private List<Airdrop> mAirdrops;
+    private int counter = 0;
 
     public AirdropAdapter(Context context, ArrayList<Airdrop> airdrops){
         this.mContext = context;
@@ -43,6 +45,7 @@ public class AirdropAdapter  extends RecyclerView.Adapter<AirdropViewHolder>{
         holder.airdropName.setText(airdrop.getAirdropName());
         holder.airdropCatagory.setText(airdrop.getAirdropCatagory());
         holder.airdropCost.setText(airdrop.getAirdropCost()+" FUNC");
+        holder.airdropCost.setTextColor(Color.RED);
 
         for(int i = 0; i < airdrop.getAirdropContents().length; i++)
         {
