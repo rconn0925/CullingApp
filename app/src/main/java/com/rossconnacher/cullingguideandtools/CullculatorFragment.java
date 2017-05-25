@@ -497,8 +497,8 @@ public class CullculatorFragment extends Fragment{
             maxThrowDamage = 12;
 
         }else if (weaponSpinner.getSelectedItem().toString().equals("Crowbar")) {
-            minDamage = 6;
-            maxDamage = 18;
+            minDamage = 5;
+            maxDamage = 17;
             minThrowDamage = 5;
             maxThrowDamage = 15;
 
@@ -555,8 +555,8 @@ public class CullculatorFragment extends Fragment{
             maxThrowDamage = 12;
 
         } else if (weaponSpinner.getSelectedItem().toString().equals("Javelin")) {
-            minDamage = 6;
-            maxDamage = 18;
+            minDamage = 5;
+            maxDamage = 17;
             minThrowDamage = 6;
             maxThrowDamage = 21;
 
@@ -567,8 +567,8 @@ public class CullculatorFragment extends Fragment{
             maxThrowDamage = 18;
 
         } else if (weaponSpinner.getSelectedItem().toString().equals("Baseball Bat")) {
-            minDamage = 7;
-            maxDamage = 22;
+            minDamage = 6;
+            maxDamage = 21;
             minThrowDamage = 6;
             maxThrowDamage = 18;
 
@@ -605,8 +605,8 @@ public class CullculatorFragment extends Fragment{
             maxThrowDamage = 15;
 
         } else if (weaponSpinner.getSelectedItem().toString().equals("Tomahawk")) {
-            minDamage = 7;
-            maxDamage = 19;
+            minDamage = 6;
+            maxDamage = 18;
             minThrowDamage = 7;
             maxThrowDamage = 24;
 
@@ -617,8 +617,8 @@ public class CullculatorFragment extends Fragment{
             maxThrowDamage = 18;
 
         } else if (weaponSpinner.getSelectedItem().toString().equals("Yari")) {
-            minDamage = 7;
-            maxDamage = 22;
+            minDamage = 6;
+            maxDamage = 21;
             minThrowDamage = 6;
             maxThrowDamage = 18;
 
