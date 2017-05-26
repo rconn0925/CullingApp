@@ -21,6 +21,7 @@
             android:id="@+id/nav_guides"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Guides" />
+
         <item
             android:id="@+id/nav_patchnotes"
             android:icon="@drawable/ic_import_contacts_black_24dp"
