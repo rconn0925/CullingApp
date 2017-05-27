@@ -34,6 +34,10 @@
             android:id="@+id/nav_loadoutrandomizer"
             android:icon="@drawable/ic_casino_black_24dp"
             android:title="Loadout Randomizer" />
+        <item
+            android:id="@+id/nav_twitch"
+            android:icon="@drawable/ic_videogame_asset_black_24dp"
+            android:title="Twitch Streams" />
     </group>
 
 

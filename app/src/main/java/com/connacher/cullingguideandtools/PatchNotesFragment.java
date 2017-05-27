@@ -28,6 +28,8 @@ public class PatchNotesFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+
+
     private OnFragmentInteractionListener mListener;
 
     public PatchNotesFragment() {

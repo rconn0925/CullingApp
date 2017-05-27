@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity
         PrisonMapFragment.OnFragmentInteractionListener,
         PatchNotesFragment.OnFragmentInteractionListener,
         AirdropsFragment.OnFragmentInteractionListener,
-        PerksFragment.OnFragmentInteractionListener
+        PerksFragment.OnFragmentInteractionListener,
+        TwitchFragment.OnFragmentInteractionListener
 {
 
 
@@ -119,6 +120,8 @@ public class MainActivity extends AppCompatActivity
             currentFragment = new CullculatorFragment();
         } else if (id == R.id.nav_loadoutrandomizer) {
             currentFragment = new LoadoutRandomizerFragment();
+        } else if (id == R.id.nav_twitch) {
+            currentFragment = new TwitchFragment();
         }
 
         // Insert the fragment by replacing any existing fragment
