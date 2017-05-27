@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.rossconnacher.cullingguideandtools.MainActivity">
+    tools:context="com.connacher.cullingguideandtools.MainActivity">
 
     <include layout="@layout/content_main" />
 
@@ -26,9 +26,9 @@
                 android:gravity="center">
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:src="@drawable/cullingblack"
+                    android:src="@drawable/cullingwhite"
                     android:paddingBottom="8dp"
                     android:paddingEnd="68dp"
                     android:paddingRight="68dp" />
