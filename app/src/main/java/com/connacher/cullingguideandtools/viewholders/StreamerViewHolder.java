@@ -20,8 +20,6 @@ public class StreamerViewHolder extends RecyclerView.ViewHolder {
     public ImageView streamerPreviewImage;
     @InjectView(R.id.streamerTitle)
     public TextView streamerTitle;
-    @InjectView(R.id.streamerLogo)
-    public ImageView streamerLogo;
     @InjectView(R.id.streamerViewersAndName)
     public TextView streamerViewersAndName;
 

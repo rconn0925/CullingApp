@@ -83,8 +83,8 @@ public class StreamerAdapter extends RecyclerView.Adapter<StreamerViewHolder>{
         final Streamer streamer = mStreamers.get(position);
         holder.streamerTitle.setText(streamer.getTitle());
         holder.streamerViewersAndName.setText(streamer.getViewers()+" viewers on "+ streamer.getName());
+        Picasso.with(mContext).setLoggingEnabled(true);
         Picasso.with(mContext).load("https:"+streamer.getPreviewImageUrl()).into(holder.streamerPreviewImage);
-        Picasso.with(mContext).load("https:"+streamer.getLogoImageUrl()).into(holder.streamerLogo);
 
     }
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Parcelable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -124,26 +125,22 @@ public class TwitchFragment extends Fragment {
                         String game = streamData.getString("game");
                         int viewers = streamData.getInt("viewers");
                         JSONObject preview = streamData.getJSONObject("preview");
-                        String previewUrl = preview.getString("large").substring(8).replaceAll("\\/","/");
+                        String previewUrl = preview.getString("medium").substring(8).replaceAll("\\/","/");
                         JSONObject channel = streamData.getJSONObject("channel");
                         String title = channel.getString("status");
                         String name = channel.getString("display_name");
                         int channelID = channel.getInt("_id");
-                        String logoUrl = channel.getString("logo").substring(8).replaceAll("\\/","/");
                         String channelUrl = channel.getString("url").substring(8).replaceAll("\\/","/");
 
-                        Streamer mStreamer = new Streamer(name,channelID,game,title,viewers,logoUrl,previewUrl,channelUrl);
+                        Streamer mStreamer = new Streamer(name,channelID,game,title,viewers,previewUrl,channelUrl);
                         Log.d(TAG,"prewview image: "+ previewUrl);
                         streamers.add(mStreamer);
-                        if(streams.length() == i+1){
-                            mLayoutManager = new GridLayoutManager(getActivity(), 1);
-                            mView.setLayoutManager(mLayoutManager);
-                            mView.addItemDecoration(new SimpleDividerItemDecoration(mContext));
-                            mStreamerAdapter = new StreamerAdapter(getActivity(), streamers);
-                            mView.setAdapter(mStreamerAdapter);
-                        }
                     }
-
+                    mLayoutManager = new GridLayoutManager(getActivity(), 1);
+                    mView.setLayoutManager(mLayoutManager);
+                    mView.addItemDecoration(new SimpleDividerItemDecoration(mContext));
+                    mStreamerAdapter = new StreamerAdapter(getActivity(), streamers);
+                    mView.setAdapter(mStreamerAdapter);
 
                 } catch (JSONException e) {
                     e.printStackTrace();

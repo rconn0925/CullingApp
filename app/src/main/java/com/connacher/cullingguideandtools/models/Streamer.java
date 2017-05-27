@@ -11,17 +11,15 @@ public class Streamer {
     private String name;
     private String title;
     private String previewImageUrl;
-    private String logoImageUrl;
     private String channelUrl;
 
 
-    public Streamer(String name, int id, String game,String title, int viewers,String logoImageUrl, String previewImageUrl,String channelUrl ){
+    public Streamer(String name, int id, String game,String title, int viewers, String previewImageUrl,String channelUrl ){
         this.name = name;
         this.id = id;
         this.game = game;
         this.title = title;
         this.viewers = viewers;
-        this.logoImageUrl = logoImageUrl;
         this.previewImageUrl = previewImageUrl;
         this.channelUrl = channelUrl;
     }
@@ -37,9 +35,6 @@ public class Streamer {
     }
     public String getPreviewImageUrl(){
         return previewImageUrl;
-    }
-    public String getLogoImageUrl(){
-        return logoImageUrl;
     }
     public String getChannelUrl(){
         return channelUrl;
