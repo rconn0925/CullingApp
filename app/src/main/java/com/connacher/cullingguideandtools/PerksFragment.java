@@ -111,16 +111,17 @@ public class PerksFragment extends Fragment {
         Perk perk15 = new Perk("Chemist","Utility","Stim effects last 50% longer");
         Perk perk16 = new Perk("Load Dropper","Utility","Airdrops arrive much faster");
         Perk perk17 = new Perk("Man Tracker","Utility","Start the match with a man tracker in your inventory");
-        Perk perk18 = new Perk("Backpacker","Utility","Start the match with a backpack in your inventory");
-        Perk perk19 = new Perk("Basher","Combat","-15% melee and thrown charge time with all bludgeons");
-        Perk perk20 = new Perk("Brutus","Combat","+25% backstab damage with any blade");
-        Perk perk21 = new Perk("Golden Arm","Combat","+25% velocity and +100% damage for thrown spears (+50% for crafter) Maximum effect at 20 meters");
-        Perk perk22 = new Perk("Mangler","Combat","40% of melee damage dealth with axes is also applied to opponents stamina");
-        Perk perk23 = new Perk("Ranger","Combat","+10% damage with all ranged weapons");
-        Perk perk24 = new Perk("Trapper","Combat","-75% time to place and disarm traps. Snares apply a 30% expose wound");
-        Perk perk25 = new Perk("Speedy Spear","Movement","+5% sprint speed and sprint stamina cost increased while holding any spear");
-        Perk perk26 = new Perk("Stealthy Blade","Movement","Your movement is nearly silent while holding any blade");
-        Perk perk27 = new Perk("Recovery","Movement","+30% faster stamina regeneration");
+        Perk perk18 = new Perk("Jump Start","Utility","Start the match with a random tier one weapon in your inventory");
+        Perk perk19 = new Perk("Backpacker","Utility","Start the match with a backpack in your inventory");
+        Perk perk20 = new Perk("Basher","Combat","-15% melee and thrown charge time with all bludgeons");
+        Perk perk21 = new Perk("Brutus","Combat","+25% backstab damage with any blade");
+        Perk perk22 = new Perk("Golden Arm","Combat","+25% velocity and +100% damage for thrown spears (+50% for crafter) Maximum effect at 20 meters");
+        Perk perk23 = new Perk("Mangler","Combat","40% of melee damage dealth with axes is also applied to opponents stamina");
+        Perk perk24 = new Perk("Ranger","Combat","+10% damage with all ranged weapons");
+        Perk perk25 = new Perk("Trapper","Combat","-75% time to place and disarm traps. Snares apply a 30% expose wound");
+        Perk perk26 = new Perk("Speedy Spear","Movement","+5% sprint speed and sprint stamina cost increased while holding any spear");
+        Perk perk27 = new Perk("Stealthy Blade","Movement","Your movement is nearly silent while holding any blade");
+        Perk perk28 = new Perk("Recovery","Movement","+30% faster stamina regeneration");
       
         //add all perks to list
         allPerks = new ArrayList<Perk>();
@@ -151,6 +152,7 @@ public class PerksFragment extends Fragment {
         allPerks.add(perk25);
         allPerks.add(perk26);
         allPerks.add(perk27);
+        allPerks.add(perk28);
         mPerksAdapter.removeAll();
         for(int i = 0;i<allPerks.size();i++){
             mPerksAdapter.add(allPerks.get(i));

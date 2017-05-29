@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import com.connacher.cullingguideandtools.R;
 import com.connacher.cullingguideandtools.models.Perk;
 import com.connacher.cullingguideandtools.models.Streamer;
 import com.connacher.cullingguideandtools.viewholders.StreamerViewHolder;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -79,13 +81,24 @@ public class StreamerAdapter extends RecyclerView.Adapter<StreamerViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(StreamerViewHolder holder, int position) {
+    public void onBindViewHolder(final StreamerViewHolder holder, int position) {
         final Streamer streamer = mStreamers.get(position);
         holder.streamerTitle.setText(streamer.getTitle());
         holder.streamerViewersAndName.setText(streamer.getViewers()+" viewers on "+ streamer.getName());
-        Picasso.with(mContext).setLoggingEnabled(true);
-        Picasso.with(mContext).load("https:"+streamer.getPreviewImageUrl()).into(holder.streamerPreviewImage);
+        Log.d(TAG,streamer.getPreviewImageUrl());
 
+        Picasso.with(mContext).setLoggingEnabled(true);
+        Picasso.with(mContext).load("https:"+streamer.getPreviewImageUrl()).placeholder(R.drawable.white).into(holder.streamerPreviewImage, new Callback() {
+            @Override
+            public void onSuccess() {
+                holder.streamLoading.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onError() {
+
+            }
+        });
     }
 
     @Override

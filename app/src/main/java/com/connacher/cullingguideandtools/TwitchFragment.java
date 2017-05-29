@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.TextView;
 
 import com.connacher.cullingguideandtools.adapters.StreamerAdapter;
 import com.connacher.cullingguideandtools.models.Streamer;
@@ -51,6 +52,8 @@ public class TwitchFragment extends Fragment {
 
     @InjectView(R.id.twitchRecyclerView)
     public RecyclerView mView;
+    @InjectView(R.id.noStreamersText)
+    public TextView noStreamersText;
 
     private OnFragmentInteractionListener mListener;
     private TwitchEngine mEngine;
@@ -115,6 +118,9 @@ public class TwitchFragment extends Fragment {
 
                     int numStreamers = json.getInt("_total");
                     Log.d(TAG,"numStreamers: "+ numStreamers);
+                    if(numStreamers==0){
+                        noStreamersText.setText("No one is streaming The Culling");
+                    }
 
                     JSONArray streams = json.getJSONArray("streams");
 
@@ -125,7 +131,7 @@ public class TwitchFragment extends Fragment {
                         String game = streamData.getString("game");
                         int viewers = streamData.getInt("viewers");
                         JSONObject preview = streamData.getJSONObject("preview");
-                        String previewUrl = preview.getString("medium").substring(8).replaceAll("\\/","/");
+                        String previewUrl = preview.getString("large").substring(8).replaceAll("\\/","/");
                         JSONObject channel = streamData.getJSONObject("channel");
                         String title = channel.getString("status");
                         String name = channel.getString("display_name");

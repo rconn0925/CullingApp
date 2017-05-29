@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.connacher.cullingguideandtools.R;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -22,6 +23,8 @@ public class StreamerViewHolder extends RecyclerView.ViewHolder {
     public TextView streamerTitle;
     @InjectView(R.id.streamerViewersAndName)
     public TextView streamerViewersAndName;
+    @InjectView(R.id.streamLoading)
+    public AVLoadingIndicatorView streamLoading;
 
     public StreamerViewHolder(View itemView) {
         super(itemView);
